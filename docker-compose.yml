@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  db:
+    container_name: db
+    image: postgres:15.4
+    environment:
+      - POSTGRES_USER=twuuser
+      - POSTGRES_PASSWORD=twupw
+      - POSTGRES_DB=twudb
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+      - ./db:/docker-entrypoint-initdb.d/
+
+  app:
+    container_name: app
+    build:
+      context: ./app
+      dockerfile: Dockerfile  # Assuming Dockerfile is directly inside the app directory
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=db
+    depends_on:
+      - db
+
+volumes:
+  db-data:

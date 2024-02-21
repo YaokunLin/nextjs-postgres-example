@@ -1,0 +1,27 @@
+Title: HAPPY Puzzle
+
+# Grid
+--*---
+-*---*
+-----*
+*----*
+--*---
+
+# Clues
+Across:
+1. First across clue
+3. Second across clue
+6. Third across clue
+
+Down:
+1. First down clue
+2. Second down clue
+4. Fourth down clue
+
+# Solutions
+1A: ANSWER1
+3A: ANSWER2
+6A: ANSWER3
+1D: ANSWER4
+2D: ANSWER5
+4D: ANSWER6
